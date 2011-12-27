@@ -1,0 +1,1 @@
+../bundle/rubycomplete.vim/plugin/rubycomplete.vim
