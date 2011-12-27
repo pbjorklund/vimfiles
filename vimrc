@@ -7,6 +7,7 @@ set background=light
 "colorscheme tir_black
 colorscheme solarized
 set directory=~/.vim/tmp
+filetype plugin indent on     " required!
 
 set tabstop=2
 set shiftwidth=2
@@ -41,24 +42,14 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
-Bundle 'tpope/vim-endwise'
-Bundle 'L9'
 Bundle 'https://github.com/tpope/vim-rails.git'
-Bundle 'YankRing.vim'
-Bundle 'matchit.zip'
+Bundle 'matchit.zip' 
 Bundle 'bufexplorer.zip'
 Bundle 'wincent/Command-T'
 Bundle 'Gist.vim'
 Bundle 'rubycomplete.vim'
 Bundle 'http://github.com/mattn/zencoding-vim'
-
-filetype plugin indent on     " required!
-"
-"Don't cheat
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+Bundle 'https://github.com/tpope/vim-haml.git'
 
 "ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
@@ -66,9 +57,6 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
-
-"improve autocomplete menu color
-"highlight Pmenu ctermbg=238 gui=bold
 
 set splitright " Open new vertical split windows to the right of the current one, not the left.
 set splitbelow " See above description. Opens new windows below, not above.
