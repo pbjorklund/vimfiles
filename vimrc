@@ -1,6 +1,7 @@
 set t_Co=256
 au FileType * setl fo-=cro
 filetype off                   " required!
+set relativenumber
 
 syntax on
 set background=light
@@ -8,6 +9,8 @@ set background=light
 colorscheme solarized
 set directory=~/.vim/tmp
 filetype plugin indent on     " required!
+
+set laststatus=2    " Always show status line
 
 set tabstop=2
 set shiftwidth=2
@@ -17,6 +20,10 @@ set scrolloff=5
 set notimeout
 set ttimeout
 set timeoutlen=50
+
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_disabled_filetypes = ['scss']
 
 "Remappings
 map <F2> :NERDTreeToggle<CR>
@@ -50,6 +57,8 @@ Bundle 'Gist.vim'
 Bundle 'rubycomplete.vim'
 Bundle 'http://github.com/mattn/zencoding-vim'
 Bundle 'https://github.com/tpope/vim-haml.git'
+Bundle 'https://github.com/scrooloose/syntastic.git'
+Bundle 'git://github.com/millermedeiros/vim-statline.git'
 
 "ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
