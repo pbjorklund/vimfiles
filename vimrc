@@ -2,36 +2,33 @@ set t_Co=256
 au FileType * setl fo-=cro
 filetype off                   " required!
 set relativenumber
+set nocompatible
 
 syntax on
-set background=light
-"colorscheme tir_black
+set background=dark
 colorscheme solarized
 set directory=~/.vim/tmp
 filetype plugin indent on     " required!
 
 set laststatus=2    " Always show status line
+set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{rvm#statusline()}\ %{fugitive#statusline()}\ (%{&ff})\ %p%%\ 
 
 set tabstop=2
 set shiftwidth=2
 set titlestring=%f title "Display filename in term
-set scrolloff=5
+set scrolloff=8
 
 set notimeout
 set ttimeout
 set timeoutlen=50
 
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_disabled_filetypes = ['scss']
-
 "Remappings
-map <F2> :NERDTreeToggle<CR>
-nnoremap <silent> <F3> :YRShow<CR>
-map <F4> :A<CR>
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 let mapleader = ","
 inoremap jj <Esc>
-imap <Tab> <C-P>
 
 " Map ctrl-movement keys to window switching
 map <C-k> <C-w><Up>
@@ -47,7 +44,6 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'https://github.com/tpope/vim-rails.git'
 Bundle 'matchit.zip' 
@@ -57,8 +53,8 @@ Bundle 'Gist.vim'
 Bundle 'rubycomplete.vim'
 Bundle 'http://github.com/mattn/zencoding-vim'
 Bundle 'https://github.com/tpope/vim-haml.git'
-Bundle 'https://github.com/scrooloose/syntastic.git'
-Bundle 'git://github.com/millermedeiros/vim-statline.git'
+Bundle 'rvm.vim'
+Bundle 'https://github.com/tpope/vim-fugitive.git'
 
 "ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
