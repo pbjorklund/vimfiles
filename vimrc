@@ -4,6 +4,8 @@ filetype off                   " required!
 set relativenumber
 set nocompatible
 
+source ~/.vim/snippets/support_functions.vim
+
 syntax on
 set background=dark
 colorscheme solarized
@@ -23,11 +25,13 @@ set ttimeout
 set timeoutlen=50
 
 "Remappings
+let mapleader = ","
+let snippets_dir = "~/.vim/snippets"
+
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
-
-let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
 inoremap jj <Esc>
 
 " Map ctrl-movement keys to window switching
@@ -43,18 +47,24 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
+"Github
 Bundle 'gmarik/vundle'
 Bundle 'msanders/snipmate.vim'
-Bundle 'https://github.com/tpope/vim-rails.git'
+
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-haml.git'
+Bundle 'tpope/vim-fugitive.git'
+
+Bundle 'wincent/Command-T'
+Bundle 'mattn/zencoding-vim'
+Bundle 'godlygeek/tabular'
+
+"Vim repo
 Bundle 'matchit.zip' 
 Bundle 'bufexplorer.zip'
-Bundle 'wincent/Command-T'
+Bundle 'rvm.vim'
 Bundle 'Gist.vim'
 Bundle 'rubycomplete.vim'
-Bundle 'http://github.com/mattn/zencoding-vim'
-Bundle 'https://github.com/tpope/vim-haml.git'
-Bundle 'rvm.vim'
-Bundle 'https://github.com/tpope/vim-fugitive.git'
 
 "ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
