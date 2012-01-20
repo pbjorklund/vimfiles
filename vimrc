@@ -14,6 +14,7 @@ set background=light
 colorscheme solarized
 set directory=~/.vim/tmp
 filetype plugin indent on     " required!
+set backspace=indent,eol,start
 
 set laststatus=2    " Always show status line
 set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{rvm#statusline()}\ %{fugitive#statusline()}\ (%{&ff})\ %p%%\
@@ -27,11 +28,21 @@ set notimeout
 set ttimeout
 set timeoutlen=50
 
+"folding settings
+set foldmethod=syntax   "fold based on syntax
+set foldnestmax=10      "deepest fold is 10 levels
+set foldenable        "fold by default
+set foldlevel=5         "this is just what i use
+
 "Remappings
 let mapleader = ","
 let snippets_dir = "~/.vim/snippets"
 "Tabularize
 let mapleader=','
+
+"Fold remapping
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
 
 nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
