@@ -8,6 +8,7 @@ syntax on
 set directory=~/.vim/tmp
 filetype plugin indent on     " required!
 set backspace=indent,eol,start
+set mouse=a
 
 "Visual
 set background=light
@@ -26,8 +27,7 @@ set shiftwidth=2
 set scrolloff=8
 
 "Timeout
-set ttimeout
-set timeoutlen=50
+set notimeout
 
 "Search
 set incsearch
