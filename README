@@ -1,3 +1,18 @@
 pbjorklunds vimfiles
 ====================
 Keeping vim running since the summer of 2010.
+
+1. Submodule in /snippets needs to be initailized
+
+2. Pull vundle into bundle/vundle
+https://github.com/gmarik/vundle.git
+
+3. Perform :BundleInstall in vim
+
+4. CommandT requires that vim is compiled with ruby support
+brew install https://raw.github.com/adamv/homebrew-alt/master/duplicates/vim.rb
+
+5. Compile Command T
+cd ~/.vim/bundle/Command-T/ruby/command-t
+ruby extconf.rb
+make
