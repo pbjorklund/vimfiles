@@ -1,4 +1,4 @@
-set guifont=Monaco:h14
+set guifont=Monaco:h12
 
 "set antialias
 "set guioptions-=t

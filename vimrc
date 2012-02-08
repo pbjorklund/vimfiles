@@ -1,4 +1,5 @@
 "General config
+set hidden
 set t_Co=256
 au FileType * setl fo-=cro
 filetype off                   " required!
