@@ -74,36 +74,6 @@ let g:use_zen_complete_tag = 1
 " No Help, please
 nmap <F1> <Esc>
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-"Github
-Bundle 'gmarik/vundle'
-
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-haml.git'
-Bundle 'tpope/vim-fugitive.git'
-
-Bundle 'msanders/snipmate.vim'
-Bundle 'wincent/Command-T'
-Bundle 'mattn/zencoding-vim'
-Bundle 'godlygeek/tabular'
-Bundle 'ervandew/supertab'
-
-"Vim repo
-Bundle 'matchit.zip'
-Bundle 'bufexplorer.zip'
-Bundle 'rvm.vim'
-Bundle 'Gist.vim'
-
-"Ruby
-"ruby
-"autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-"autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-"autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-"autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-
 autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
 
 "Remove trailing whitespace on write
