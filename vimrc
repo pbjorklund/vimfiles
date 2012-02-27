@@ -78,3 +78,5 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
 
 "Remove trailing whitespace on write
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+
+call pathogen#infect()
