@@ -2,16 +2,22 @@ pbjorklunds vimfiles
 ====================
 Keeping vim running since the summer of 2010.
 
+Install vim with ruby support
+----------------------------
+    brew install https://raw.github.com/adamv/homebrew-alt/master/duplicates/vim.rb #CommandT requires ruby compiled vim
+
+Clone repo
+----------
+    git clone git@github.com:pbjorklund/vimfiles.git ~/.vim
     ln -s  ~/.vim/vimrc ~/.vimrc
-
     ln -s ~/.vim/gvimrc ~/.gvimrc
-
-CommandT requires that vim is compiled with ruby support
---------------------------------------------------------
-brew install https://raw.github.com/adamv/homebrew-alt/master/duplicates/vim.rb
+    cd ~/.vim
+    git submodule update --init
 
 Compile Command T
 -----------------
-cd ~/.vim/bundle/Command-T/ruby/command-t
-ruby extconf.rb
-make
+    cd ~/.vim/bundle/Command-T/ruby/command-t
+    ruby extconf.rb
+    make
+
+Enjoy
