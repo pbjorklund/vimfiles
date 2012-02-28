@@ -12,6 +12,7 @@ set backspace=indent,eol,start
 set mouse=a
 set clipboard=unnamed
 set cursorline
+set shell=/bin/sh
 
 "Visual
 set background=light
@@ -59,6 +60,10 @@ nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
 nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
+
+"vim-rspec
+nmap <Leader>rr :RunSpecLine<CR>
+nmap <Leader>rf :RunSpec<CR>
 
 "Window management
 set splitright " Open new vertical split windows to the right of the current one, not the left.
