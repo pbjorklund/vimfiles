@@ -11,6 +11,7 @@ filetype plugin indent on     " required!
 set backspace=indent,eol,start
 set mouse=a
 set clipboard=unnamed
+set cursorline
 
 "Visual
 set background=light
@@ -43,6 +44,7 @@ set foldlevel=5       " this is just what i use
 let mapleader = ","
 let snippets_dir = "~/.vim/snippets"
 let mapleader=','
+nnoremap <CR> :nohlsearch<cr>
 
 "Fold remapping
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
@@ -74,9 +76,32 @@ let g:use_zen_complete_tag = 1
 " No Help, please
 nmap <F1> <Esc>
 
-autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
+if has("autocmd")
+	autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
+	"Remove trailing whitespace on write
+	autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
-"Remove trailing whitespace on write
-autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+	"When editing a file, always jump to the last known cursor position.
+	"Stolen from https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
+
+	autocmd BufReadPost *
+				\ if line("'\"") > 0 && line("'\"") <= line("$") |
+				\   exe "normal g`\"" |
+				\ endif
+
+endif
+
+" Remap the tab key to do autocompletion or indentation depending on the
+" context (from http://www.vim.org/tips/tip.php?tip_id=102)
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
 
 call pathogen#infect()
