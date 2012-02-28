@@ -2,8 +2,9 @@ pbjorklunds vimfiles
 ====================
 Keeping vim running since the summer of 2010.
 
-ln -s  ~/.vim/vimrc ~/.vimrc
-ln -s ~/.vim/gvimrc ~/.gvimrc
+    ln -s  ~/.vim/vimrc ~/.vimrc
+
+    ln -s ~/.vim/gvimrc ~/.gvimrc
 
 CommandT requires that vim is compiled with ruby support
 --------------------------------------------------------

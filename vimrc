@@ -13,6 +13,7 @@ set mouse=a
 set clipboard=unnamed
 set cursorline
 set shell=/bin/sh
+set expandtab
 
 "Visual
 set background=light
