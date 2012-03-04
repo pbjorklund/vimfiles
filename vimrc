@@ -15,6 +15,8 @@ set cursorline
 set shell=/bin/sh
 set expandtab
 
+let g:gist_clip_command = 'pbcopy'
+
 "Visual
 set background=light
 colorscheme solarized
@@ -81,33 +83,5 @@ let g:use_zen_complete_tag = 1
 
 " No Help, please
 nmap <F1> <Esc>
-
-if has("autocmd")
-	autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
-	"Remove trailing whitespace on write
-	autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
-
-	"When editing a file, always jump to the last known cursor position.
-	"Stolen from https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
-
-	autocmd BufReadPost *
-				\ if line("'\"") > 0 && line("'\"") <= line("$") |
-				\   exe "normal g`\"" |
-				\ endif
-
-endif
-
-" Remap the tab key to do autocompletion or indentation depending on the
-" context (from http://www.vim.org/tips/tip.php?tip_id=102)
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
 
 call pathogen#infect()
