@@ -48,14 +48,14 @@ set foldlevel=5       " this is just what i use
 let mapleader = ","
 let snippets_dir = "~/.vim/snippets"
 let mapleader=','
-nnoremap <CR> :nohlsearch<cr>
 
 "Fold remapping
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-nmap <leader>v :tabedit $MYVIMRC<CR>
+map <leader>v :tabedit $MYVIMRC<CR>
+map <leader>s :vs todo.txt<CR>
 inoremap jj <Esc>
 
 "Tabularize
