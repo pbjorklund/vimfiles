@@ -11,6 +11,7 @@ Clone repo
     git clone git@github.com:pbjorklund/vimfiles.git ~/.vim
     ln -s  ~/.vim/vimrc ~/.vimrc
     ln -s ~/.vim/gvimrc ~/.gvimrc
+    ln -s ~/.vim/jslintrc ~/.jslintrc
     cd ~/.vim
     git submodule update --init
 
