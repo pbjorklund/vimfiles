@@ -14,12 +14,14 @@ set clipboard=unnamed
 set cursorline
 set shell=/bin/sh
 set expandtab
+set wildmode=list:longest
+let g:JSLintHighlightErrorLine = 0 
 
 let g:gist_clip_command = 'pbcopy'
 
 "Visual
 set background=light
-colorscheme solarized
+colorscheme tir_black
 set laststatus=2                                                                                       " Always show status line
 set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{rvm#statusline()}\ %{fugitive#statusline()}\ (%{&ff})\ %p%%\ " Set a pretty status line
 
@@ -39,12 +41,12 @@ set notimeout
 set incsearch
 
 "Folding settings
-set foldmethod=indent " fold based on syntax
+set foldmethod=syntax 
 set foldnestmax=10    " deepest fold is 10 levels
-set foldenable        " fold by default
-set foldlevel=5       " this is just what i use
+set foldlevel=1
+set foldlevelstart=99
 
-"Remappings
+"Remapping
 let mapleader = ","
 let snippets_dir = "~/.vim/snippets"
 let mapleader=','
@@ -54,8 +56,8 @@ nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-map <leader>v :tabedit $MYVIMRC<CR>
-map <leader>s :vs todo.txt<CR>
+map <leader>v :e $MYVIMRC<CR>
+map <leader>s :vs ~/Dropbox/todo.txt<CR>
 inoremap jj <Esc>
 
 "Tabularize

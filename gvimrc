@@ -1,10 +1,4 @@
-set guifont=Monaco:h12
-
-"set antialias
-"set guioptions-=t
-"set guioptions=-T
-
-"set fuopt=maxvert,maxhorz
+set guifont=Monaco:h14
 
 "No audible bell
 set vb
@@ -14,9 +8,4 @@ set guioptions-=T
 
 " Use console dialogs
 set guioptions+=c
-
-" Local config
-if filereadable($HOME . "/.gvimrc.local")
-  source ~/.gvimrc.local
-endif
 
