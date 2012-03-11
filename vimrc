@@ -20,8 +20,8 @@ let g:JSLintHighlightErrorLine = 0
 let g:gist_clip_command = 'pbcopy'
 
 "Visual
-set background=light
-colorscheme tir_black
+set background=dark
+colorscheme solarized
 set laststatus=2                                                                                       " Always show status line
 set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{rvm#statusline()}\ %{fugitive#statusline()}\ (%{&ff})\ %p%%\ " Set a pretty status line
 
