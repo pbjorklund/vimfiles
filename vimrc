@@ -1,3 +1,5 @@
+call pathogen#infect()
+
 "General config
 set hidden
 set t_Co=256
@@ -15,8 +17,11 @@ set cursorline
 set shell=/bin/sh
 set expandtab
 set wildmode=list:longest
-let g:JSLintHighlightErrorLine = 0 
 
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_rails = 1
+
+let g:JSLintHighlightErrorLine = 0 
 let g:gist_clip_command = 'pbcopy'
 
 "Visual
@@ -41,7 +46,7 @@ set notimeout
 set incsearch
 
 "Folding settings
-set foldmethod=syntax 
+set foldmethod=manual 
 set foldnestmax=10    " deepest fold is 10 levels
 set foldlevel=1
 set foldlevelstart=99
@@ -86,4 +91,3 @@ let g:use_zen_complete_tag = 1
 " No Help, please
 nmap <F1> <Esc>
 
-call pathogen#infect()
