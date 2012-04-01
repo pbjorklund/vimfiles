@@ -91,3 +91,13 @@ let g:use_zen_complete_tag = 1
 " No Help, please
 nmap <F1> <Esc>
 
+" Switch easily between light and dark background. Useful for solarized
+function! ToggleBackgroundColor()
+  if &background == "dark"
+    let &background="light"
+  else
+    let &background="dark"
+  endif
+endfunction
+
+nmap <F3> :call ToggleBackgroundColor()<CR>
