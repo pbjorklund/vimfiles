@@ -59,8 +59,6 @@ let mapleader=','
 "Fold remapping
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
 map <leader>v :e $MYVIMRC<CR>
 map <leader>s :vs ~/Dropbox/todo.txt<CR>
 inoremap jj <Esc>
@@ -88,8 +86,6 @@ map <C-h> <C-w><Left>
 " Set options for Zen Coding
 let g:use_zen_complete_tag = 1
 
-" No Help, please
-nmap <F1> <Esc>
 
 " Switch easily between light and dark background. Useful for solarized
 function! ToggleBackgroundColor()
@@ -100,4 +96,13 @@ function! ToggleBackgroundColor()
   endif
 endfunction
 
+" Function keys
+nmap <F1> <Esc> "No help
+
+nnoremap <F2> :set invpaste paste?<CR> "Toggle paste mode
+set pastetoggle=<F2>
+
 nmap <F3> :call ToggleBackgroundColor()<CR>
+
+nmap <F4> :Gstatus<CR>
+nmap <F5> :Gcommit<CR>
