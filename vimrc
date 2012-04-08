@@ -60,7 +60,7 @@ let mapleader=','
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 map <leader>v :e $MYVIMRC<CR>
-map <leader>s :vs ~/Dropbox/todo.txt<CR>
+map <leader>s :vs ~/Dropbox/todo.taskpaper<CR>
 inoremap jj <Esc>
 
 "Tabularize
