@@ -4,7 +4,7 @@ Keeping vim running since the summer of 2010.
 
 Install vim with ruby support
 ----------------------------
-    brew install https://raw.github.com/adamv/homebrew-alt/master/duplicates/vim.rb
+    brew install https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb
 
 Clone repo
 ----------
