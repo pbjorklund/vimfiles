@@ -55,3 +55,6 @@
 [submodule "bundle/taskpaper-vim"]
 	path = bundle/taskpaper-vim
 	url = https://github.com/davidoc/taskpaper.vim.git
+[submodule "bundle/ri_vim"]
+	path = bundle/ri_vim
+	url = https://github.com/danchoi/ri.vim.git
