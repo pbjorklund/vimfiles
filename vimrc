@@ -18,9 +18,6 @@ set shell=/bin/zsh
 set expandtab "Convert tabs to spaces
 set wildmode=list:longest
 
-let g:rubycomplete_buffer_loading = 1
-let g:rubycomplete_rails = 1
-
 let g:gist_clip_command = 'pbcopy'
 
 "Visual
