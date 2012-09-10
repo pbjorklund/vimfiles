@@ -14,7 +14,7 @@ set backspace=indent,eol,start
 set mouse=a
 set clipboard=unnamed
 set cursorline
-set shell=/bin/sh
+set shell=/bin/zsh
 set expandtab
 set wildmode=list:longest
 
