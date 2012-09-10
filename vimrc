@@ -15,13 +15,12 @@ set mouse=a
 set clipboard=unnamed
 set cursorline
 set shell=/bin/zsh
-set expandtab
+set expandtab "Convert tabs to spaces
 set wildmode=list:longest
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
-let g:JSLintHighlightErrorLine = 0 
 let g:gist_clip_command = 'pbcopy'
 
 "Visual
@@ -100,7 +99,6 @@ map <C-h> <C-w><Left>
 
 " Set options for Zen Coding
 let g:use_zen_complete_tag = 1
-
 
 " Switch easily between light and dark background. Useful for solarized
 function! ToggleBackgroundColor()
