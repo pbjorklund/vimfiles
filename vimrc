@@ -113,7 +113,7 @@ function! ToggleBackgroundColor()
 endfunction
 
 " Function keys
-nmap <F1> <Esc> "No help
+nmap <F1> :lopen<CR>
 
 nnoremap <F2> :set invpaste paste?<CR> "Toggle paste mode
 set pastetoggle=<F2>
