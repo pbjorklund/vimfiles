@@ -122,6 +122,7 @@ nmap <F3> :call ToggleBackgroundColor()<CR>
 
 nmap <F4> :Gstatus<CR>
 nmap <F5> :Gcommit<CR>
+nmap <F10> :TagbarToggle<CR>
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
