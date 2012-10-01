@@ -24,8 +24,13 @@ If build succeds on first try, remember to run `make clean` before recompiling
     rvm use 1.8.7
     cd ~/.vim/bundle/Command-T/ruby/command-t
     rvm use 1.8.7
-    bundle 
+    bundle
     ruby extconf.rb
     make
+
+Patch fonts
+-----------
+Powerline.vim uses special characters to make it more pretty.
+Dump fonts from https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts into fonts dir
 
 Enjoy
