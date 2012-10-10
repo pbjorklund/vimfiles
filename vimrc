@@ -18,6 +18,11 @@ set shell=/bin/zsh
 set expandtab "Convert tabs to spaces
 set wildmode=list:longest
 
+set listchars=nbsp:·,tab:▸\ ,trail:·  " Configure how invisibles appear.
+set list!                       " Show invisibles.
+set modelines=1                 " Use modeline overrides.
+set nojoinspaces                " 1 space, not 2, when joining sentences.
+
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
@@ -30,7 +35,9 @@ let g:Powerline_symbols = 'fancy'
 set background=dark
 colorscheme solarized
 set laststatus=2                                                                                       " Always show status line
-set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{rvm#statusline()}\ %{fugitive#statusline()}\ (%{&ff})\ %p%%\ " Set a pretty status line
+
+"Commented out while evaulating powerline
+"set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{rvm#statusline()}\ %{fugitive#statusline()}\ (%{&ff})\ %p%%\ " Set a pretty status line
 
 "Extra sourcing, #todo figure out how to solve
 source ~/.vim/snippets/support_functions.vim
