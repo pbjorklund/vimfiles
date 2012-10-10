@@ -12,6 +12,7 @@ let g:Powerline#Themes#pbjorklund#theme = Pl#Theme#Create(
 		\ , 'flags.mod'
 		\ , 'syntastic:errors'
 		\ , Pl#Segment#Truncate()
+		\ , 'tagbar:currenttag'
 		\ , Pl#Segment#Split()
 		\ , 'sass:status'
 		\ , 'rvm:string'
