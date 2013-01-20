@@ -69,7 +69,6 @@ map <leader>v :e $MYVIMRC<CR>
 map <leader>s :topleft 100 :split ~/Dropbox/todo.taskpaper<cr>
 map <leader>f :e ~/notes<cr>
 map <leader>n :e ~/notes/
-map <leader>, :!pbcopy
 
 inoremap jj <Esc>
 
