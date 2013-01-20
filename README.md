@@ -19,7 +19,7 @@ Compile Command T
 -----------------
 Will not build correctly without ruby 1.8.7 and rake 0.8.7.
 If build doesnt succed on first try, remember to run `make clean` before recompiling.
-Also use rbenv system or rvm system
+Also use ``rbenv shell system`` or ``rvm use system``
 
     cd ~/.vim/bundle/Command-T/ruby/command-t
     bundle
