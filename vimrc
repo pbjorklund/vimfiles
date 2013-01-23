@@ -5,7 +5,6 @@ set hidden
 set t_Co=256
 au FileType * setl fo-=cro
 filetype off                   " required!
-set relativenumber
 set nocompatible
 syntax on
 set directory=~/.vim/tmp
@@ -33,7 +32,6 @@ set background=dark
 colorscheme solarized
 set laststatus=2                                                                                       " Always show status line
 
-"Commented out while evaulating powerline
 set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{fugitive#statusline()}\ (%{&ff})\ %p%%\ " Set a pretty status line
 
 "Extra sourcing, #todo figure out how to solve
@@ -93,10 +91,6 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
-
-"vim-rspec
-nmap <Leader>rr :RunSpecLine<CR>
-nmap <Leader>rf :RunSpec<CR>
 
 "Window management
 set splitright " Open new vertical split windows to the right of the current one, not the left.
