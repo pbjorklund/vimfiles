@@ -17,6 +17,7 @@ set cursorline
 set shell=/bin/zsh
 set expandtab "Convert tabs to spaces
 set wildmode=list:longest
+set viminfo='0,:0,<0,@0,f0
 
 set listchars=nbsp:·,tab:▸\ ,trail:·  " Configure how invisibles appear.
 set list!                       " Show invisibles.
