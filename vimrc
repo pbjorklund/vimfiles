@@ -34,7 +34,7 @@ colorscheme solarized
 set laststatus=2                                                                                       " Always show status line
 
 "Commented out while evaulating powerline
-set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{rvm#statusline()}\ %{fugitive#statusline()}\ (%{&ff})\ %p%%\ " Set a pretty status line
+set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{fugitive#statusline()}\ (%{&ff})\ %p%%\ " Set a pretty status line
 
 "Extra sourcing, #todo figure out how to solve
 source ~/.vim/snippets/support_functions.vim
