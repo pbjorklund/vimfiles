@@ -11,7 +11,9 @@ set directory=~/.vim/tmp
 filetype plugin indent on     " required!
 set backspace=indent,eol,start
 set mouse=a
-set clipboard=unnamed
+
+set clipboard+=unnamed
+
 set cursorline
 set shell=/bin/zsh
 set expandtab "Convert tabs to spaces
@@ -25,13 +27,15 @@ let g:gist_open_browser_after_post = 1
 "Visual
 set background=dark
 colorscheme solarized
-set laststatus=2                                                                                       " Always show status line
+set laststatus=2  " Always show status line
 
-set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{fugitive#statusline()}\ (%{&ff})\ %p%%\ " Set a pretty status line
+set statusline=%F%m%r%h%w\ %Y\ [%l,%v]\ %{fugitive#statusline()}\(%{&ff})\ %p%%
 
 "Extra sourcing, #todo figure out how to solve
 source ~/.vim/snippets/support_functions.vim
 autocmd FileType cucumber source ~/.vim/after/ftplugin/cucumber.vim
+
+au FileType crontab set nobackup nowritebackup
 
 "Indents / scroll
 set tabstop=2
@@ -87,6 +91,12 @@ map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
+"vim-rspec
+map <Leader>r :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+let g:rspec_command = "!zeus rspec {spec}"
+
 "Window management
 set splitright " Open new vertical split windows to the right of the current one, not the left.
 set splitbelow " See above description. Opens new windows below, not above.
@@ -134,3 +144,10 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
