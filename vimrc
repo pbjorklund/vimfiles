@@ -1,5 +1,3 @@
-call pathogen#infect()
-
 "General config
 set hidden
 set t_Co=256
@@ -11,16 +9,27 @@ set directory=~/.vim/tmp
 filetype plugin indent on     " required!
 set backspace=indent,eol,start
 set mouse=a
-
-set clipboard+=unnamed
+set clipboard=unnamedplus
 
 set cursorline
-set shell=/bin/zsh
 set expandtab "Convert tabs to spaces
 set wildmode=list:longest
 set viminfo='0,:0,<0,@0,f0
 
-let g:gist_clip_command = 'pbcopy'
+if has("win32")
+  "Windows options here
+else
+  if has("unix")
+    call pathogen#infect()
+
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+      "Mac options here
+      let g:gist_clip_command = 'pbcopy'
+    endif
+  endif
+endif
+
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
