@@ -26,6 +26,8 @@ else
     if s:uname == "Darwin\n"
       "Mac options here
       let g:gist_clip_command = 'pbcopy'
+    else
+      let g:gist_clip_command = 'xclip -selection clipboard'
     endif
   endif
 endif
@@ -154,3 +156,7 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
+let g:nodejs_complete_config = {
+      \  'js_compl_fn': 'jscomplete#CompleteJS',
+      \  'max_node_compl_len': 15
+      \}
