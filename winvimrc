@@ -1,4 +1,9 @@
+execute pathogen#infect()
+
+inoremap jj <Esc>
+
 "General config
+"
 set hidden
 filetype off                   " required!
 set relativenumber
@@ -6,9 +11,10 @@ set nocompatible
 syntax on
 filetype plugin indent on     " required!
 set backspace=indent,eol,start
-set cursorline
 set expandtab
 set wildmode=list:longest
+
+set backupdir=~/tmp
 
 "Indents / scroll
 set tabstop=2
@@ -39,3 +45,6 @@ nmap <F1> <Esc> "No help
 
 nnoremap <F2> :set invpaste paste?<CR> "Toggle paste mode
 set pastetoggle=<F2>
+
+set shell=powershell
+set shellcmdflag=-command
