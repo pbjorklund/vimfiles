@@ -1,3 +1,7 @@
+"Needs pathogen in vimfiles/autoload
+"vim-p1 is nice
+"I don't have the energy to create another repo
+"
 execute pathogen#infect()
 
 inoremap jj <Esc>
