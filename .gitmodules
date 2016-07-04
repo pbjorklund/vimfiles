@@ -13,9 +13,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
-[submodule "bundle/Command-T"]
-	path = bundle/Command-T
-	url = https://github.com/wincent/Command-T.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
